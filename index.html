@@ -7,13 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="./reponsive.css">
 </head>
 
 <body>
-    <video id="videoBG" src="./Firework Video by After Effect.mp4" muted loop autoplay></video>
+    <section></section>
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <p class="question animate-character">Tên của bạn là gì?</p>
+            <input type="text" class="answer" id="answer">
+            <button type="submit" class="btn-submit" id="btn-submit">Trả lời</button>
+        </div>
+    </div>
     <div class="app-wrapper">
-        <header class="animate-character">Countdown to new year</header>
-        <div class="countdown">
+        <img class="background" src="./background.jpg" alt="background" id="background">
+        <header id="header" class="animate-character">Đếm ngược tới Giao thừa</header>
+        <div class="countdown" id="countdown">
+            <div class="time-section" id="days">
+                <div class="time-group">
+                    <div class="time-segment">
+                        <div class="segment-display">
+                            <div class="segment-display__top"></div>
+                            <div class="segment-display__bottom"></div>
+                            <div class="segment-overlay">
+                                <div class="segment-overlay__top"></div>
+                                <div class="segment-overlay__bottom"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-segment">
+                        <div class="segment-display">
+                            <div class="segment-display__top"></div>
+                            <div class="segment-display__bottom"></div>
+                            <div class="segment-overlay">
+                                <div class="segment-overlay__top"></div>
+                                <div class="segment-overlay__bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="time-text">Ngày</p>
+            </div>
             <div class="time-section" id="hours">
                 <div class="time-group">
                     <div class="time-segment">
@@ -37,9 +71,9 @@
                         </div>
                     </div>
                 </div>
-                <p>Hours</p>
+                <p class="time-text">Giờ</p>
             </div>
-    
+
             <div class="time-section" id="minutes">
                 <div class="time-group">
                     <div class="time-segment">
@@ -63,9 +97,9 @@
                         </div>
                     </div>
                 </div>
-                <p>Minutes</p>
+                <p class="time-text">Phút</p>
             </div>
-    
+
             <div class="time-section" id="seconds">
                 <div class="time-group">
                     <div class="time-segment">
@@ -89,11 +123,15 @@
                         </div>
                     </div>
                 </div>
-                <p>Seconds</p>
+                <p class="time-text">Giây</p>
             </div>
         </div>
+        <p class="wish-content" id="wish"></p>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="jquery.fireworks.js"></script>
     <script src="./app.js"></script>
+
 </body>
 
 </html>
